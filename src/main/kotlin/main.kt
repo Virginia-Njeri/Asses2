@@ -3,8 +3,8 @@ fun main() {
     println(Virgy.deposit(5000.0))
     println(Virgy.withdraw(1000.0))
     println(Virgy.details())
-    var name="Virgy"
-    evenIndices("mangoes")
+    getEven("banana")
+
 
 }
 //Create a classCurrentAccount with the following attributes:account
@@ -35,9 +35,14 @@ open class classCurrentAccount(var accountNumber:String, var accountName:String,
 //withdraw() method first checks if the number of withdrawalsis less
 //than 4 for it to allow one to withdraw money from the account. It also
 //increments the withdrawals attribute after a successful withdrawal
-  class classSavingsAccounts( accountNumber:String,accountName:String,Balance:Int):classCurrentAccount(accountNumber, accountName, Balance){
- override fun getWithdrawal(withdrawals:Int){
-
+open class CurrentAccount(var accountName:String,var accountNumber:String,var balance:Int ){
+    fun deposit(amount: Double){
+        var newBalance= amount+balance
+        println(newBalance)
+    }
+    fun withdraw(amount: Double){
+        var decresedAmount= balance-amount
+        println(decresedAmount)
 
 }
 }
@@ -55,7 +60,6 @@ var y=chars.indices
     chars.forEach { chars->
         if ((chars.indices % 2) == 0)
             println(chars)
-    }
 
 
 
@@ -78,4 +82,4 @@ fun evenIndices(word:String):String{
 
 
 }
-f
+
